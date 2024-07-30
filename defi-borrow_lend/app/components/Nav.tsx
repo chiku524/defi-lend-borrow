@@ -85,7 +85,7 @@ export const Nav = () => {
           <p>I</p>
         </span>
       </Link>
-      <div className={styles.linksContainer}>
+      <div className={`${styles.linksContainer} linksContainer`}>
         <Link
           className={`link ${styles.link} ${pathname === "/" ? styles.active : ""}`}
           href="/"
@@ -108,7 +108,7 @@ export const Nav = () => {
         >
           Quotes
         </Link>
-        <div className={`${styles.connectBtn}`} onClick={() => (wallet ? disconnect(wallet) : connect())}>
+        <div className={!wallet || connecting ? `${styles.connectBtn}` : `${styles.disconnectBtn}`} onClick={() => (wallet ? disconnect(wallet) : connect())}>
           {connecting ? 'Connecting' : wallet ? 'Disconnect' : 'Connect'}
         </div>
       </div>

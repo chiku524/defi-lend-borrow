@@ -47,6 +47,31 @@
   background: rgba(20, 20, 20, 0.829);
 }
 
+@media only screen and (max-width: 700px) {
+  .nav {
+    flex-direction: row-reverse;
+  }
+  .logoContainer {
+    display: none !important;
+  }
+  .linksContainer {
+    flex-direction: column !important;
+    margin: 0 auto !important;
+  }
+  .link {
+    width: 100% !important;
+  }
+  .link:hover {
+    margin: 0px !important;
+  }
+  .connectBtn {
+    width: 100% !important;
+  }
+  .disconnectBtn {
+    width: 100% !important;
+  }
+}
+
 .logoContainer {
   margin-left: 3%;
   display: flex;
@@ -108,7 +133,7 @@
   width: 25%;
   text-align: center;
   background: rgba(34, 116, 238, 0.616);
-  border-radius: 15px 0px;
+  border-radius: 0px 15px;
 }
 .connectBtn:hover {
   text-shadow: 0px 0px 5px rgba(126, 238, 34, 0.8);
@@ -116,6 +141,22 @@
   cursor: pointer;
   border: 1px solid #c1eb07;
 }
+.disconnectBtn {
+  color: #07eb40;
+  margin: 0 10px;
+  transition: 0.25s ease;
+  width: 25%;
+  text-align: center;
+  background: rgba(238, 75, 34, 0.616);
+  border-radius: 0px 15px;
+}
+.disconnectBtn:hover {
+  text-shadow: 0px 0px 5px rgba(126, 238, 34, 0.8);
+  transition: 0.25s ease;
+  cursor: pointer;
+  border: 1px solid #07eb40;
+}
+
 
 .z-indexed.svelte-w5zexe {
   top: 0;
