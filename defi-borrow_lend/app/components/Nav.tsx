@@ -75,13 +75,13 @@ export const Nav = () => {
 
   return (
     <nav className={styles.nav}>
-      <Link href="/home" className={`${styles.logoContainer} logoContainer`}>
+      <Link href="/" className={`${styles.logoContainer} logoContainer`}>
         <Image src={corkiLogo} className={styles.logo} alt="corki logo image" height={50} width={50} />
         <span className={`${styles.logoText} logoText`}>
-          <p>C</p>
+          <p>M</p>
           <p>O</p>
-          <p>R</p>
-          <p>K</p>
+          <p>S</p>
+          <p>H</p>
           <p>I</p>
         </span>
       </Link>
@@ -108,7 +108,7 @@ export const Nav = () => {
         >
           Quotes
         </Link>
-        <div className={!wallet || connecting ? `${styles.connectBtn}` : `${styles.disconnectBtn}`} onClick={() => (wallet ? disconnect(wallet) : connect())}>
+        <div className={!wallet || connecting ? `${styles.connectBtn} connectBtn` : `${styles.disconnectBtn} disconnectBtn`} onClick={() => (wallet ? disconnect(wallet) : connect())}>
           {connecting ? 'Connecting' : wallet ? 'Disconnect' : 'Connect'}
         </div>
       </div>

@@ -79,10 +79,11 @@
 }
 .logoContainer:hover {
   cursor: pointer;
+  text-shadow: 0px 0px 10px rgba(156, 34, 238, 0.8);
 }
 
 .logoText {
-  color: rgb(199, 202, 15);
+  color: rgb(164, 15, 223);
   margin-left: 15px;
   display: flex;
   flex-direction: row;
@@ -93,7 +94,7 @@
 }
 
 .logoText p {
-  margin-right: 5px;
+  margin-right: 3px;
   margin-block-start: 15px;
   margin-block-end: 15px;
 }
@@ -104,14 +105,14 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 10%;
+  margin-right: 2%;
 }
 
 .link {
   color: #27a5b6;
-  margin: 0 10px;
+  margin: 0 5px;
+  padding: 0 10px;
   transition: 0.25s ease;
-  width: 33%;
   text-align: center;
 }
 
@@ -124,13 +125,14 @@
 .link.active {
   background: rgba(253, 253, 253, 0.137);
   border-radius: 15px 0px;
+  border: 1px solid rgba(128, 19, 231, 0.685);
 }
 
 .connectBtn {
-  color: #c1eb07;
+  color: #c1eb07ce;
   margin: 0 10px;
+  padding: 0 10px;
   transition: 0.25s ease;
-  width: 25%;
   text-align: center;
   background: rgba(34, 116, 238, 0.616);
   border-radius: 0px 15px;
@@ -144,22 +146,17 @@
 .disconnectBtn {
   color: #07eb40;
   margin: 0 10px;
+  padding: 0 10px;
   transition: 0.25s ease;
-  width: 25%;
   text-align: center;
   background: rgba(238, 75, 34, 0.616);
-  border-radius: 0px 15px;
+  border-radius: 15px 0px;
 }
 .disconnectBtn:hover {
   text-shadow: 0px 0px 5px rgba(126, 238, 34, 0.8);
   transition: 0.25s ease;
   cursor: pointer;
   border: 1px solid #07eb40;
-}
-
-
-.z-indexed.svelte-w5zexe {
-  top: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
