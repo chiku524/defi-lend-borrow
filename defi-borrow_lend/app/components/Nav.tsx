@@ -76,7 +76,6 @@ export const Nav = () => {
   return (
     <nav className={styles.nav}>
       <Link href="/" className={`${styles.logoContainer} logoContainer`}>
-        <Image src={corkiLogo} className={styles.logo} alt="corki logo image" height={50} width={50} />
         <span className={`${styles.logoText} logoText`}>
           <p>M</p>
           <p>O</p>
@@ -84,7 +83,9 @@ export const Nav = () => {
           <p>H</p>
           <p>I</p>
         </span>
+        <Image src={corkiLogo} className={styles.logo} alt="corki logo image" height={50} width={50} />
       </Link>
+      <hr className={`${styles.logoDivider}`}/>
       <div className={`${styles.linksContainer} linksContainer`}>
         <Link
           className={`link ${styles.link} ${pathname === "/" ? styles.active : ""}`}
@@ -92,6 +93,7 @@ export const Nav = () => {
         >
           Home
         </Link>
+        <hr />
         <Link
           className={`link ${styles.link} ${
             pathname === "/auth" ? styles.active : ""
@@ -100,6 +102,7 @@ export const Nav = () => {
         >
           Dashboard
         </Link>
+        <hr />
         <Link
           className={`link ${styles.link} ${
             pathname === "/quotes" ? styles.active : ""
@@ -108,6 +111,7 @@ export const Nav = () => {
         >
           Quotes
         </Link>
+        {/* <hr /> */}
         <div className={!wallet || connecting ? `${styles.connectBtn} connectBtn` : `${styles.disconnectBtn} disconnectBtn`} onClick={() => (wallet ? disconnect(wallet) : connect())}>
           {connecting ? 'Connecting' : wallet ? 'Disconnect' : 'Connect'}
         </div>
