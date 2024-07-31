@@ -112,9 +112,9 @@ export const Nav = () => {
           Quotes
         </Link>
         {/* <hr /> */}
-        <div className={!wallet || connecting ? `${styles.connectBtn} connectBtn` : `${styles.disconnectBtn} disconnectBtn`} onClick={() => (wallet ? disconnect(wallet) : connect())}>
-          {connecting ? 'Connecting' : wallet ? 'Disconnect' : 'Connect'}
-        </div>
+      </div>
+      <div className={!wallet || connecting ? `${styles.connectBtn} connectBtn` : `${styles.disconnectBtn} disconnectBtn`} onClick={() => (wallet ? disconnect(wallet) : connect())}>
+        {connecting ? 'Connecting' : wallet ? 'Disconnect' : 'Connect'}
       </div>
     </nav>
   );
