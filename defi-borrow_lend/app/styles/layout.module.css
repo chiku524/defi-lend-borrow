@@ -1,10 +1,9 @@
 .container {
   align-items: center;
-  min-height: 100vh;
-  min-width: 100vw;
-  max-height: 100vh;
-  max-width: 100vh;
-  background: rgba(1, 1, 1, 0.801);
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
 }
 
 .logo {
@@ -15,19 +14,25 @@
 .main {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-}
-
-.footer {
-  justify-self: center;
+  min-height: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  font-family:'Courier New', Courier, monospace;
 }
 
 @media only screen and (max-width: 700px) {
+  .main {
+    height: 77.5%;
+    position: fixed;
+    top: 22.5%;
+  }
   .nav {
-    min-height: fit-content !important;
+    min-height: 22.5% !important;
     min-width: 100vw !important;
     max-width: 100% !important;
+    position: fixed;
+    top: 0;
   }
   hr.logoDivider {
     display: none !important;
@@ -42,19 +47,23 @@
   .disconnectBtn {
     margin-top: 10px !important;
   }
+  .footer {
+    width: 100% !important;
+  }
 }
 
 .nav {
-  grid-area: nav;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  max-width: fit-content;
+  width: 17.5%;
   padding: 8px;
   font-size: calc(10px + 2vmin);
-  background: rgba(20, 20, 20, 0.829);
+  background: rgb(20, 20, 20);
+  position: fixed;
+  left: 0;
 }
 
 .logoContainer {
@@ -74,7 +83,6 @@
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
-  font-family:'Courier New', Courier, monospace;
   font-weight: lighter;
 }
 
@@ -162,4 +170,21 @@
   100% {
     transform: translateY(0px);
   }
+}
+
+.footer {
+  justify-self: center;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 82.5%;
+  height: 17%;
+  background: rgb(29, 29, 29);
+  color: rgb(164, 15, 223);
+}
+
+.footerContainer .linksContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

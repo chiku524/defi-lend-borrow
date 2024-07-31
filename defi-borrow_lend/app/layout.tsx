@@ -17,12 +17,20 @@ export default function RootLayout({ children }: Props) {
         <body>
           <section className={styles.container}>
             <Nav />
-
-            <main className={styles.main}>{children}</main>
-
-            <footer className={styles.footer}>
-              
-            </footer>
+            <main className={styles.main}>
+              <>
+                {children}
+              </>
+              <footer className={styles.footer}>
+                <div className={`${styles.footerContainer}`}>
+                  <h3>Moshi &copy; 2024</h3>
+                  <div className={`${styles.linksContainer}`}>
+                    <h5>Terms of Service</h5>
+                    <h5>Privacy Policy</h5>
+                  </div>
+                </div>
+              </footer>
+            </main>
           </section>
         </body>
       </html>

@@ -1,0 +1,23 @@
+@media only screen and (max-width: 700px) {
+    .container {
+        width: 100% !important;
+        top: 22.5% !important;
+    }
+}
+
+.container {
+    width: 82.5%;
+    height: 83%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: rgb(0, 70, 117);
+}
+
+.dashboardContainer {
+    width: 90%;
+    height: 75%;
+    margin: 5%;
+    background: rgba(199, 199, 199, 0.534);
+    border-radius: 15px;
+}

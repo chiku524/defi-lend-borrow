@@ -13,14 +13,18 @@ import {
 } from "@/lib/features/counter/counterSlice";
 
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
-import styles from "./Counter.module.css";
+import styles from "./Dashboard.module.css";
 
-export const Counter = () => {
+export const Dashboard = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div>
-      
+    <div className={`${styles.container}`}>
+      <div className={`${styles.dashboardContainer}`}>
+        <div className={`${styles.header}`}>
+          <span>Assets</span>
+        </div>
+      </div>
     </div>
   );
 };
