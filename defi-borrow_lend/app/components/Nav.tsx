@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { gsap } from "gsap";
-import { init, useConnectWallet } from '@web3-onboard/react'
+import { init, useAccountCenter, useConnectWallet } from '@web3-onboard/react'
 import injectedModule from '@web3-onboard/injected-wallets'
 import { ethers } from 'ethers'
 import corkiLogo from "../images/corki-logo.png";
@@ -40,8 +40,12 @@ import { useLayoutEffect } from "react";
         label: 'Base',
         rpcUrl: 'https://mainnet.base.org'
       }
-    ]
-  })
+    ],
+    notify: {
+      desktop: {enabled: true, position: 'topRight', transactionHandler: transaction => {if (transaction.eventCode === 'txPool') {return { type: 'success', message: 'Your transaction from #1 DApp is in the mempool'}}}},
+      mobile: {enabled: true, transactionHandler: transaction => {if (transaction.eventCode === 'txPool') {return {type: 'success', message: 'Your transaction from #1 DApp is in the mempool'}}},position: 'topRight'}  
+    }
+  });
 
 
 export const Nav = () => {
@@ -72,6 +76,8 @@ export const Nav = () => {
     // ethersProvider = new ethers.BrowserProvider(wallet.provider, 'any')
     ethersProvider = new ethers.BrowserProvider(wallet.provider, 'any')
   }
+
+  useAccountCenter()
 
   return (
     <nav className={styles.nav}>
