@@ -22,17 +22,19 @@
 }
 
 @media only screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+  }
   .main {
     height: 77.5%;
-    position: fixed;
-    top: 22.5%;
   }
   .nav {
     min-height: 22.5% !important;
     min-width: 100vw !important;
     max-width: 100% !important;
-    position: fixed;
-    top: 0;
+  }
+  .logoContainer {
+    margin-top: -15px !important;
   }
   hr.logoDivider {
     display: none !important;
@@ -43,9 +45,11 @@
   }
   .connectBtn {
     margin-top: 10px !important;
+    margin-bottom: 15px !important;
   }
   .disconnectBtn {
     margin-top: 10px !important;
+    margin-bottom: 15px !important;
   }
   .footer {
     width: 100% !important;
@@ -57,13 +61,14 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  min-height: 100vh;
+  min-height: 100%;
   width: 17.5%;
   padding: 8px;
-  font-size: calc(10px + 2vmin);
+  font-size: 30px;
   background: rgb(20, 20, 20);
   position: fixed;
   left: 0;
+  top: 0;
 }
 
 .logoContainer {
@@ -125,7 +130,7 @@
 
 .connectBtn {
   color: #c1eb07ce;
-  margin: 0 10px;
+  margin: 0 10px 15px;
   padding: 0 10px;
   transition: 0.25s ease;
   text-align: center;
@@ -140,7 +145,7 @@
 }
 .disconnectBtn {
   color: #07eb40;
-  margin: 0 10px;
+  margin: 0 10px 15px;
   padding: 0 10px;
   transition: 0.25s ease;
   text-align: center;
@@ -174,17 +179,27 @@
 
 .footer {
   justify-self: center;
+  width: 82.5%;
+  height: 10%;
+  background: rgb(29, 29, 29);
+  color: rgb(164, 15, 223);
   position: fixed;
   bottom: 0;
   right: 0;
-  width: 82.5%;
-  height: 17%;
-  background: rgb(29, 29, 29);
-  color: rgb(164, 15, 223);
 }
-
+.footerContainer {
+  display: flex;
+  flex-direction: row;
+}
+.footerContainer h3 {
+  margin-left: 5%;
+}
 .footerContainer .linksContainer {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+
+.footerContainer .linksContainer h5 {
+  margin-right: 5%;
 }

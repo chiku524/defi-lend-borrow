@@ -97,7 +97,7 @@ export const Nav = () => {
           className={`link ${styles.link} ${pathname === "/" ? styles.active : ""}`}
           href="/"
         >
-          Home
+          Dashboard
         </Link>
         <hr />
         <Link
@@ -106,7 +106,7 @@ export const Nav = () => {
           }`}
           href="/auth"
         >
-          Dashboard
+          Markets
         </Link>
         <hr />
         <Link

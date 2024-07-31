@@ -1,13 +1,23 @@
 @media only screen and (max-width: 700px) {
     .container {
         width: 100% !important;
+        height: 150% !important;
         top: 22.5% !important;
+        bottom: 10% !important;
+    }
+    .wallet {
+        width: 90% !important;
+        margin: 25px 5% !important;
+    }
+    .assets {
+        width: 90% !important;
+        margin: 0 5% !important;
     }
 }
 
 .container {
     width: 82.5%;
-    height: 83%;
+    height: 90%;
     position: fixed;
     top: 0;
     right: 0;
@@ -16,8 +26,64 @@
 
 .dashboardContainer {
     width: 90%;
-    height: 75%;
+    height: 80%;
     margin: 5%;
-    background: rgba(199, 199, 199, 0.534);
+    background: rgb(20, 20, 20);
     border-radius: 15px;
+    overflow: auto;
+}
+
+.wallet {
+    width: 350px;
+    height: 20%;
+    background: rgba(43, 43, 43, 0.726);
+    border-radius: 15px;
+    margin: 3%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.wallet span.walletAddress {
+    color: rgb(2, 189, 2);
+    margin-left: 10px;
+    margin-top: 5px;
+}
+.walletHr {
+    width: 80%;
+}
+
+.walletBalance {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+.walletBalance span:first-child {
+    color: rgb(2, 189, 2);
+    font-weight: bold;
+    margin: 0 10px 5px 10px;
+}
+.walletBalance span:nth-child(2) {
+    color: whitesmoke;
+    margin-right: 10px;
+}
+
+.assets {
+    background: rgba(43, 43, 43, 0.726);
+    width: 350px;
+    margin: 0 3%;
+    height: 60%;
+}
+.assets .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:rgb(58, 248, 255);
+}
+.assets .header span {
+    margin: 3%;
+}
+.assets .header span:nth-child(2) {
+    margin-right: 7%;
 }

@@ -21,7 +21,8 @@ export default function RootLayout({ children }: Props) {
               <>
                 {children}
               </>
-              <footer className={styles.footer}>
+            </main>
+            <footer className={styles.footer}>
                 <div className={`${styles.footerContainer}`}>
                   <h3>Moshi &copy; 2024</h3>
                   <div className={`${styles.linksContainer}`}>
@@ -30,7 +31,6 @@ export default function RootLayout({ children }: Props) {
                   </div>
                 </div>
               </footer>
-            </main>
           </section>
         </body>
       </html>
